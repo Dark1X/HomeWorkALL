@@ -1,0 +1,23 @@
+		#container {
+	position: absolute;
+/*	border: 1px solid #000;*/
+/*	text-align:center;*/
+	width: 100%;
+	height: 80%;
+	z-index: 1;
+	left: auto;
+	top: auto;
+}
+        #container2 {
+	position:relative;
+/*	border: 1px solid #000;*/
+	width: 35%;
+	height: 80%;
+	left: 32%;
+	top: 0px;
+}
+        
+        body {
+/*	background-color: #FFFFFF;*/
+	background-image: url(../img/tu.jpg);
+}

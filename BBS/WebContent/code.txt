@@ -1,0 +1,32 @@
+
+ if (UserEmail.equals(null)|| UserPwd==(null) || UserEmail.equals("")|| UserPwd.equals("")){
+  out.println("µÇÂ¼Ê§°Ü");%>
+
+ <jsp:forward page="./login.jsp"></jsp:forward>
+ 
+ 
+<% 
+}else{
+	
+ if(UserName==null){
+	  
+
+
+	 %>
+	 <jsp:forward page="./index.jsp"></jsp:forward>
+
+ <%}else{%>
+ 
+ <jsp:forward page="./index.jsp"></jsp:forward>
+	 
+ <%
+ }
+	 
+ }
+ 
+ 
+ request.setCharacterEncoding("UTF-8");  
+response.setCharacterEncoding("UTF-8");  
+response.setContentType("text/html; charset=utf-8");  
+//·ÀÖ¹³öÏÖÂÒÂë
+ 
