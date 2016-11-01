@@ -74,9 +74,9 @@ Connection conn=DriverManager.getConnection(connectSQL,"root","");
 
 <br><br>
 
-<button type="submit" class="btn btn-danger">修改</button>
+<button type="submit" class="btn btn-info">修改</button>
 &nbsp;&nbsp;&nbsp;
-<button type="reset" class="btn btn-danger">重置</button>
+<button type="reset" class="btn btn-info">重置</button>
 </center>
   </form>
 </body>
