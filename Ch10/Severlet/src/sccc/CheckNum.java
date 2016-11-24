@@ -44,14 +44,14 @@ public class CheckNum extends HttpServlet {
 		String show = "";
 		
 		if(num < random){
-			show = "你猜的太小了~~";
+			show = "你刚刚猜的数字是"+"<font color='green'>"+num+"</font>"+"猜的太小了~~";
 		}else if(num > random){
 			
-			show = "你猜的太大了~~";
+			show = "你刚刚猜的数字是"+"<font color='green'>"+num+"</font>"+"你猜的太大了~~";
 			
 		}else{
 			
-			show = "恭喜,获得限量版女朋友一个~~";
+			show = "你刚刚猜的数字是"+"<font color='green'>"+num+"</font><br>"+"恭喜,获得限量版女朋友一个~~";
 		}
 		
 		request.setAttribute("random", random);	
@@ -70,7 +70,7 @@ public class CheckNum extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
+           //我不会告诉你这里是处理Post的地方
 		
 
 	}
