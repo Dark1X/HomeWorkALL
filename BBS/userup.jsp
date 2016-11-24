@@ -13,15 +13,15 @@
 </head>
 <body>
 
+<jsp:useBean id="con" class="database.SQL" scope="session" />
 <%
+
 request.setCharacterEncoding("UTF-8");  
 response.setCharacterEncoding("UTF-8");  
 response.setContentType("text/html; charset=utf-8");  
 //防止出现乱码
 
-Class.forName("com.mysql.jdbc.Driver");
-String connectSQL="jdbc:mysql://localhost:3306/soft";
-Connection conn=DriverManager.getConnection(connectSQL,"root","");
+Connection conn=con.getConnection();//连接数据库
   
  String sql="select * from user where id=?";
  PreparedStatement st = conn.prepareStatement(sql);

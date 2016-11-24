@@ -10,11 +10,8 @@
 <body>
 <br>
 <table class="table table-hover">
-<!--<tr>
-<td  class="success"><h4><b>标题</b></h4></td>
-<br>
-<td  class="success"><b><h4>发帖人</h4></b></td>
-</tr>-->
+
+<jsp:useBean id="con" class="database.SQL" scope="session" />
 <%
 
 request.setCharacterEncoding("UTF-8");  
@@ -22,11 +19,7 @@ response.setCharacterEncoding("UTF-8");
 response.setContentType("text/html; charset=utf-8");  
 //防止出现乱码
 
-
-
-Class.forName("com.mysql.jdbc.Driver");
-String connectSQL="jdbc:mysql://localhost:3306/soft";
-Connection conn=DriverManager.getConnection(connectSQL,"root","");
+Connection conn=con.getConnection();//连接数据库
   
 
 String Username = session.getAttribute("SqlUserName").toString();//更加严格的判断用户是否登录
@@ -84,7 +77,7 @@ String UserID = session.getAttribute("SqlUserID").toString();//更加严格的�
 
 	}
 
-	
+	 rs.close();
 	 st.close();
 	 conn.close();
  }
